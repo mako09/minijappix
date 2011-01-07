@@ -9,7 +9,7 @@ This plugin add the javascript code for Jappix mini.
 
 == Description ==
 
-This plugin add the javascript code for [Jappix mini].[WordPress](http://mini.jappix.com/ "Jappix mini").
+This plugin add the javascript code for [Jappix mini](http://mini.jappix.com/ "Jappix mini").
 It's a facebook-like chat based on jabber.
 
 
