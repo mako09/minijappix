@@ -3,7 +3,7 @@ Contributors: apavel
 Tags: 
 Requires at least: 3.1
 Tested up to: 3.1
-Stable tag: trunk
+Stable tag: 0.1
 
 This plugin add the javascript code for Jappix mini.
 
@@ -17,8 +17,6 @@ It's a facebook-like chat based on jabber.
 
 This section describes how to install the plugin and get it working.
 
-e.g.
-
 1. Upload this directory to your plugins directory. It will create a 'wp-content/plugins/minijappix/' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
@@ -29,5 +27,5 @@ e.g.
 
 == Changelog ==
 
-= 0.5 =
+= 0.1 =
 * First public version
