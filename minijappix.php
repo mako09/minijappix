@@ -76,33 +76,33 @@ function mini_jappix_options() {
   }
  ?>
  <div class="wrap">
-<h2>Your Plugin Name</h2>
+<h2>Mini Jappix</h2>
 
 <form method="post" action="options.php">
     <?php settings_fields( 'mini_jappix' ); ?>
     <table class="form-table">
         <tr valign="top">
-        <th scope="row">Auto login to the account</th>
+        <th scope="row"><?php _e("Auto login to the account"); ?></th>
         <td><input type="checkbox" name="auto_login" value="1" <?php checked('1', get_option('auto_login')); ?> /></td>
         </tr>
 		
 		<tr valign="top">
-        <th scope="row">Auto show the opened chat</th>
+        <th scope="row"><?php _e("Auto show the opened chat"); ?></th>
         <td><input type="checkbox" name="auto_show" value="1" <?php checked('1', get_option('auto_show')); ?> /></td>
         </tr>
 		
 		<tr valign="top">
-        <th scope="row">Chat rooms to join (if any)</th>
+        <th scope="row"><?php _e("Chat rooms to join (if any)"); ?></th>
         <td><input type="text" name="join_groupchats" value="<?php echo get_option('join_groupchats'); ?>" /></td>
         </tr>
 		
 		<tr valign="top">
-        <th scope="row">jQuery is yet included</th>
+        <th scope="row"><?php _e("jQuery is yet included"); ?></th>
         <td><input type="checkbox" name="yet_jquery" value="1" <?php checked('1', get_option('yet_jquery')); ?> /></td>
         </tr>
 
         <tr valign="top">
-        <th scope="row">jQuery is yet included</th>
+        <th scope="row"><?php _e("jQuery is yet included"); ?></th>
         <td>
         <select id="language" name="language">
         <option value="de" <?php selected('de', get_option('language')); ?>>Deutsch</option>
