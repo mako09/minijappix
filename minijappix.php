@@ -45,7 +45,8 @@ function get_mini_jappix() {
 		$group .= '"'.trim($value).'", '; 
 	}
 	$group = substr ($group, 0, -2);
-	echo '<script type="text/javascript" src="https://static.jappix.com/php/get.php?l=en&amp;t=js&amp;g=mini.xml'.$jquery.'"></script>
+    $lng = get_option('language');
+	echo "\n".'<script type="text/javascript" src="https://static.jappix.com/php/get.php?l='.$lng.'&amp;t=js&amp;g=mini.xml'.$jquery.'"></script>
 
 <script type="text/javascript">
    jQuery(document).ready(function() {
@@ -99,6 +100,26 @@ function mini_jappix_options() {
         <th scope="row">jQuery is yet included</th>
         <td><input type="checkbox" name="yet_jquery" value="1" <?php checked('1', get_option('yet_jquery')); ?> /></td>
         </tr>
+
+        <tr valign="top">
+        <th scope="row">jQuery is yet included</th>
+        <td>
+        <select id="language" name="language">
+        <option value="de" <?php selected('de', get_option('language')); ?>>Deutsch</option>
+        <option value="en" <?php selected('en', get_option('language')); ?>>English</option>
+        <option value="eo" <?php selected('eo', get_option('language')); ?>>Esperanto</option>
+        <option value="es" <?php selected('es', get_option('language')); ?>>Español</option>
+        <option value="fr" <?php selected('fr', get_option('language')); ?>>Français</option>
+        <option value="it" <?php selected('it', get_option('language')); ?>>Italiano</option>
+        <option value="ja" <?php selected('ja', get_option('language')); ?>>日本語</option>
+        <option value="nl" <?php selected('nl', get_option('language')); ?>>Nederlands</option>
+        <option value="pl" <?php selected('pl', get_option('language')); ?>>Polski</option>
+        <option value="ru" <?php selected('ru', get_option('language')); ?>>Русский</option>
+        <option value="sv" <?php selected('sv', get_option('language')); ?>>Svenska</option>
+        </select>
+        </td>
+        </tr>
+
     </table>
     
     <p class="submit">
