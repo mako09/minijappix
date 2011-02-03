@@ -32,7 +32,8 @@ add_action('admin_init', 'register_mysettings' );
 add_action( 'init', 'my_plugin_init' );
 
 function my_plugin_init() {
-      load_plugin_textdomain( 'minijappix' );
+      $plugin_dir = basename(dirname(__FILE__));
+      load_plugin_textdomain( 'minijappix', null, $plugin_dir );
 }
 
 function get_mini_jappix() {
@@ -78,7 +79,7 @@ function register_mysettings() {
 
 function mini_jappix_options() {
   if (!current_user_can('manage_options'))  {
-    wp_die( __('You do not have sufficient permissions to access this page.') );
+    wp_die( __('You do not have sufficient permissions to access this page.', 'minijappix') );
   }
  ?>
  <div class="wrap">
@@ -88,27 +89,27 @@ function mini_jappix_options() {
     <?php settings_fields( 'mini_jappix' ); ?>
     <table class="form-table">
         <tr valign="top">
-        <th scope="row"><?php _e("Auto login to the account"); ?></th>
+        <th scope="row"><?php _e("Auto login to the account", 'minijappix'); ?></th>
         <td><input type="checkbox" name="auto_login" value="1" <?php checked('1', get_option('auto_login')); ?> /></td>
         </tr>
 		
 		<tr valign="top">
-        <th scope="row"><?php _e("Auto show the opened chat"); ?></th>
+        <th scope="row"><?php _e("Auto show the opened chat", 'minijappix'); ?></th>
         <td><input type="checkbox" name="auto_show" value="1" <?php checked('1', get_option('auto_show')); ?> /></td>
         </tr>
 		
 		<tr valign="top">
-        <th scope="row"><?php _e("Chat rooms to join (if any)"); ?></th>
+        <th scope="row"><?php _e("Chat rooms to join (if any)", 'minijappix'); ?></th>
         <td><input type="text" name="join_groupchats" value="<?php echo get_option('join_groupchats'); ?>" /></td>
         </tr>
 		
 		<tr valign="top">
-        <th scope="row"><?php _e("jQuery is yet included"); ?></th>
+        <th scope="row"><?php _e("jQuery is yet included", 'minijappix'); ?></th>
         <td><input type="checkbox" name="yet_jquery" value="1" <?php checked('1', get_option('yet_jquery')); ?> /></td>
         </tr>
 
         <tr valign="top">
-        <th scope="row"><?php _e("jQuery is yet included"); ?></th>
+        <th scope="row"><?php _e("Mini Jappix language", 'minijappix'); ?></th>
         <td>
         <select id="language" name="language">
         <option value="de" <?php selected('de', get_option('language')); ?>>Deutsch</option>
@@ -129,7 +130,7 @@ function mini_jappix_options() {
     </table>
     
     <p class="submit">
-    <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+    <input type="submit" class="button-primary" value="<?php _e('Save Changes', 'minijappix') ?>" />
     </p>
 
 </form>
