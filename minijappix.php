@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Mini Jappix
-Plugin URI: http://adresseContenantLesInfosSurVotrePlugin
+Plugin URI: http://www.apavel.me/wordpress-mini-jappix/
 Description: Courte description du plugin.
-Version: 0.1
+Version: 0.2.1
 Author: Pavel Aurélien
-Author URI: http://siteWebAuteur
+Author URI: http://www.apavel.me
 */
 
 /*  Copyright 2011  Pavel Aurélien  (email : le.manchot@gmail.com)
@@ -28,6 +28,12 @@ Author URI: http://siteWebAuteur
 add_action('wp_head', 'get_mini_jappix');
 add_action('admin_menu', 'mini_jappix_menu');
 add_action('admin_init', 'register_mysettings' );
+
+add_action( 'init', 'my_plugin_init' );
+
+function my_plugin_init() {
+      load_plugin_textdomain( 'minijappix' );
+}
 
 function get_mini_jappix() {
 	if(get_option('auto_login') == 1)
