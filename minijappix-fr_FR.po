@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mini Jappix 0.2.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/minijappix\n"
+"POT-Creation-Date: 2011-02-03 15:03:42+00:00\n"
+"PO-Revision-Date: 2011-02-03 16:05+0100\n"
+"Last-Translator: apavel\n"
+"Language-Team: Aurélien Pavel <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: minijappix/tags/0.1/minijappix.php:74
+#: minijappix/tags/0.2/minijappix.php:75
+#: minijappix/tags/0.2.1/minijappix.php:81
+#: minijappix/trunk/minijappix.php:82
+#: minijappix.php:82
+#@ default
+#@ minijappix
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Vous n'avez pas les autorisations suffisantes pour accéder à cette page."
+
+#: minijappix/tags/0.2.1/minijappix.php:91
+#: minijappix/trunk/minijappix.php:92
+#: minijappix.php:92
+#@ default
+#@ minijappix
+msgid "Auto login to the account"
+msgstr "Auto connexion"
+
+#: minijappix/tags/0.2.1/minijappix.php:96
+#: minijappix/trunk/minijappix.php:97
+#: minijappix.php:97
+#@ default
+#@ minijappix
+msgid "Auto show the opened chat"
+msgstr "Afficher la fenêtre de chat"
+
+#: minijappix/tags/0.2.1/minijappix.php:101
+#: minijappix/trunk/minijappix.php:102
+#: minijappix.php:102
+#@ default
+#@ minijappix
+msgid "Chat rooms to join (if any)"
+msgstr "Salon à rejoindre"
+
+#: minijappix/tags/0.2.1/minijappix.php:106
+#: minijappix/tags/0.2.1/minijappix.php:111
+#: minijappix/trunk/minijappix.php:107
+#: minijappix.php:107
+#@ default
+#@ minijappix
+msgid "jQuery is yet included"
+msgstr "jQuery est déjà inclut"
+
+#: minijappix/trunk/minijappix.php:112
+#: minijappix.php:112
+#@ minijappix
+msgid "Mini Jappix language"
+msgstr "Langue de Mini Jappix"
+
+#: minijappix/tags/0.1/minijappix.php:105
+#: minijappix/tags/0.2/minijappix.php:126
+#: minijappix/tags/0.2.1/minijappix.php:132
+#: minijappix/trunk/minijappix.php:133
+#: minijappix.php:133
+#@ default
+#@ minijappix
+msgid "Save Changes"
+msgstr "Sauver"
+
