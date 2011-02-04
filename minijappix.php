@@ -3,7 +3,7 @@
 Plugin Name: Mini Jappix
 Plugin URI: http://www.apavel.me/wordpress-mini-jappix/
 Description: This plugin add the javascript code for Jappix mini.
-Version: 0.2.1
+Version: 0.3
 Author: Pavel Aurélien
 Author URI: http://www.apavel.me
 */
