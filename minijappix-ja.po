@@ -5,69 +5,71 @@ msgstr ""
 "Project-Id-Version: Mini Jappix 0.3m1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/minijappix\n"
 "POT-Creation-Date: 2012-02-28 13:09:13+00:00\n"
+"PO-Revision-Date: 2012-02-28 22:10+0900\n"
+"Last-Translator: Mako N <mako@pasero.net>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: minijappix.php:90
 msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+msgstr "このページにアクセスする権限がありません。"
 
 #: minijappix.php:100
 msgid "Jappix site (default: https://static.jappix.com)"
-msgstr ""
+msgstr "Jappix のサイト (デフォルト: https://static.jappix.com)"
 
 #: minijappix.php:105
 msgid "Anonymous server (default: anonymous.jappix.com)"
-msgstr ""
+msgstr "匿名サーバー (デフォルト: anonymous.jappix.com)"
 
 #: minijappix.php:110
 msgid "Auto login to the account"
-msgstr ""
+msgstr "アカウントに自動ログインする"
 
 #: minijappix.php:115
 msgid "Auto show the opened chat"
-msgstr ""
+msgstr "開いているチャットを自動で表示する"
 
 #: minijappix.php:120
 msgid "Chat rooms to join (if any)"
-msgstr ""
+msgstr "参加する談話室 (もしあれば)"
 
 #: minijappix.php:125
 msgid "jQuery is yet included"
-msgstr ""
+msgstr "jQuery の行を含める"
 
 #: minijappix.php:130
 msgid "Mini Jappix language"
-msgstr ""
+msgstr "Mini Jappix の言語"
 
 #: minijappix.php:149
 msgid "Show tab in administration screen"
-msgstr ""
+msgstr "管理画面にタブを表示する"
 
 #: minijappix.php:155
 msgid "Save Changes"
-msgstr ""
+msgstr "変更を保存"
 
 #. Plugin Name of the plugin/theme
 msgid "Mini Jappix"
-msgstr ""
+msgstr "Mini Jappix"
 
 #. Plugin URI of the plugin/theme
 msgid "http://www.apavel.me/wordpress-mini-jappix/"
-msgstr ""
+msgstr "http://www.apavel.me/wordpress-mini-jappix/"
 
 #. Description of the plugin/theme
 msgid "This plugin add the javascript code for Jappix mini."
-msgstr ""
+msgstr "このプラグインは Jappix Mini のための Javascript コードを追加するものです。"
 
 #. Author of the plugin/theme
 msgid "Pavel Aurélien"
-msgstr ""
+msgstr "Pavel Aurélien"
 
 #. Author URI of the plugin/theme
 msgid "http://www.apavel.me"
-msgstr ""
+msgstr "http://www.apavel.me"

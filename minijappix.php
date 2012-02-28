@@ -3,7 +3,7 @@
 Plugin Name: Mini Jappix
 Plugin URI: http://www.apavel.me/wordpress-mini-jappix/
 Description: This plugin add the javascript code for Jappix mini.
-Version: 0.3
+Version: 0.3m1
 Author: Pavel Aurélien
 Author URI: http://www.apavel.me
 */
@@ -25,7 +25,9 @@ Author URI: http://www.apavel.me
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-add_action('wp_head', 'get_mini_jappix');
+add_action('wp_footer', 'get_mini_jappix', 12);
+if(get_option('admin_head') == 1)
+  add_action('admin_head', 'get_mini_jappix');
 add_action('admin_menu', 'mini_jappix_menu');
 add_action('admin_init', 'register_mysettings' );
 
@@ -37,6 +39,10 @@ function my_plugin_init() {
 }
 
 function get_mini_jappix() {
+	if(!($jappix_site = get_option('jappix_site')))
+		$jappix_site = "https://static.jappix.com";
+	if(!($anon_server = get_option('anon_server')))
+		$anon_server = "anonymous.jappix.com";
 	if(get_option('auto_login') == 1)
 		$auto_login = "true";
 	else
@@ -45,20 +51,19 @@ function get_mini_jappix() {
 		$auto_show = "true";
 	else
 		$auto_show = "false";
-	if(get_option('yet_jquery') != 1)
-		$jquery = "&amp;f=jquery.js";
+	if(get_option('yet_jquery') == 1)
+	  $jquery = '<script type="text/javascript" src=' . get_bloginfo('wpurl') . '/wp-includes/js/jquery/jquery.js?ver=1.7.1"></script>'."\n";
 	$groups = explode(',', get_option('join_groupchats'));
 	foreach ($groups as $value) {
 		$group .= '"'.trim($value).'", '; 
 	}
 	$group = substr ($group, 0, -2);
     $lng = get_option('language');
-	echo "\n".'<script type="text/javascript" src="https://static.jappix.com/php/get.php?l='.$lng.'&amp;t=js&amp;g=mini.xml'.$jquery.'"></script>
-
+	echo "\n".$jquery.'<script type="text/javascript" src="' . $jappix_site . '/php/get.php?l='.$lng.'&amp;t=js&amp;g=mini.xml"></script>
 <script type="text/javascript">
    jQuery(document).ready(function() {
       MINI_GROUPCHATS = ['.$group.'];
-      launchMini('.$auto_login.', '.$auto_show.', "anonymous.jappix.com");
+      launchMini('.$auto_login.', '.$auto_show.', "'.$anon_server.'");
    });
 </script>';
 
@@ -70,11 +75,14 @@ function mini_jappix_menu() {
 
 function register_mysettings() {
 	//register our settings
+	register_setting('mini_jappix', 'jappix_site');
+	register_setting('mini_jappix', 'anon_server');
 	register_setting('mini_jappix', 'yet_jquery');
 	register_setting('mini_jappix', 'language');
 	register_setting('mini_jappix', 'auto_login');
 	register_setting('mini_jappix', 'auto_show');
 	register_setting('mini_jappix', 'join_groupchats');
+	register_setting('mini_jappix', 'admin_head');
 }
 
 function mini_jappix_options() {
@@ -88,6 +96,16 @@ function mini_jappix_options() {
 <form method="post" action="options.php">
     <?php settings_fields( 'mini_jappix' ); ?>
     <table class="form-table">
+		<tr valign="top">
+        <th scope="row"><?php _e("Jappix site (default: https://static.jappix.com)", 'minijappix'); ?></th>
+        <td><input type="text" name="jappix_site" value="<?php echo get_option('jappix_site'); ?>" /></td>
+        </tr>
+
+		<tr valign="top">
+        <th scope="row"><?php _e("Anonymous server (default: anonymous.jappix.com)", 'minijappix'); ?></th>
+        <td><input type="text" name="anon_server" value="<?php echo get_option('anon_server'); ?>" /></td>
+        </tr>
+
         <tr valign="top">
         <th scope="row"><?php _e("Auto login to the account", 'minijappix'); ?></th>
         <td><input type="checkbox" name="auto_login" value="1" <?php checked('1', get_option('auto_login')); ?> /></td>
@@ -127,6 +145,10 @@ function mini_jappix_options() {
         </td>
         </tr>
 
+        <tr valign="top">
+        <th scope="row"><?php _e("Show tab in administration screen", 'minijappix'); ?></th>
+        <td><input type="checkbox" name="admin_head" value="1" <?php checked('1', get_option('admin_head')); ?> /></td>
+        </tr>
     </table>
     
     <p class="submit">
